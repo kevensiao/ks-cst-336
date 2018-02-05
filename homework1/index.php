@@ -12,7 +12,7 @@
 
     <body> 
         <header>
-            <h1 id="rainbow">Computer Virus</h1>
+            <h1>Computer Virus</h1>
         </header>
 
         <body>
@@ -69,7 +69,7 @@
             
             <img src="img/csumb.jpg" alt="Logo of CSUMB" /> <br/><br/>
             CST336 : Internet Programming. 2018&copy; Keven Siao <br/>
-            <strong>Disclaimer:</strong> Informations in this website can be fictitious.<br/>
+            <strong><span id="rainbow">Disclaimer:</span></strong> Informations in this website can be fictitious.<br/>
             It is used for academic purposes only.
         </footer>
 
