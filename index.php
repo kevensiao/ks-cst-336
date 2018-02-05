@@ -4,11 +4,21 @@
         <title>Keven Siao</title>
     </head>
     <body>
+        <h1>Assignmments</h1>
         <div>
-            <h1>Homeworks</h1>
-            <a href="/PersonalPortfolio">Lab1</a>
-            <a href="/homework1">Homework1</a>
+            <h2>Labs</h2>
+            <ol>
+                <li><a href="/PersonalPortfolio">Lab1</a></li>
+            </ol>
         </div>
+        
+        <div>
+            <h2>Homeworks</h2>
+            <ol>
+                <li><a href="/homework1">Homework1</a></li>
+            </ol>
+        </div>
+
 
     </body>
 </html>
