@@ -12,7 +12,7 @@
 
     <body> 
         <header>
-            <h1>Computer Virus</h1>
+            <h1 id="rainbow">Computer Virus</h1>
         </header>
 
         <body>
