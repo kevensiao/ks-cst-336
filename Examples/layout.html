@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>iLearn Layout</title>
+        <style>
+            div {
+                border: 1px solid black;    
+            }
+            
+            .row {
+                margin: 10px;
+            }
+            
+            .col {
+               padding: 10px; 
+            }
+            
+            .right-col {
+               display: inline-block; 
+            }
+        </style>
+    </head>
+    <!--outer "div"-->
+    <body> 
+        <!--for padding-->
+        <div> 
+            <!--header section-->
+            <div>
+                <!--menu-->
+                <div class="row">
+                iLearn Help Resources  
+                </div>
+                <!--title and breadcrumbs-->
+                <div class="row">
+                    CST 336 Internet
+                </div>
+            </div>
+            <!--body section-->
+            <div>
+                <!--left nav-->
+                <div class="col">
+                    Admin nav
+                </div>
+                <!--main content-->
+                <div class="col right-col">
+                    Welcome, Weekly
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,99 @@
+h1{
+    font-size: 4em;
+    font-family: OCR A Std, monospace;
+}
+
+nav , h2{
+    font-family: DejaVu Sans Mono, monospace;
+}
+
+main , footer{
+    font-family: FreeMono, monospace;
+}
+
+body{
+    background-color : #78B1C4;
+    color : black;
+}
+
+header, nav, footer{
+    text-align: center;
+}
+
+main {
+    padding-top: 20px;
+}
+
+nav a{
+    padding: 15px;
+    padding-bottom: 4px;
+    font-size: 1.8em;
+    text-decoration: none;
+    color: white;
+}
+
+nav a:hover{
+    border-bottom :2px blue solid;
+    font-size: 2em;
+    transition: .7s
+}
+
+footer{
+    clear: left;
+    padding-top: 20px ;
+    font-size: 0.9em;
+}
+
+.list{
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+
+.site{
+    padding-right: 10px;
+}
+
+.hacked{
+    height:15%;
+    width:15%;
+    float : right;
+    margin: 15px;
+}
+
+#virus{
+    float: left;
+    padding-right: 15px;
+}
+
+#protection{
+    width:25%;
+    height:25%;
+    float:right;
+    margin-right: 20px;
+}
+
+#viruses{
+    float :left;
+    width:30%;
+    height:30%;
+    margin-right: 30px;
+}
+
+#detected{
+    width:20%;
+    height:20%;
+    margin : 15px;
+    float:left;
+}
+
+#worm{
+    width:17%;
+    height:17%;
+    float:right;
+    margin:15px;
+} 
+
+.stop{
+    clear :left;
+}
