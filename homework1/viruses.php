@@ -6,11 +6,7 @@
         <title>Keven SIAO : Virus</title>
         
         <link href="css/styles.css" rel="stylesheet" type="text/css"/>
-        <style>
-            #border {
-                border-bottom :2px blue solid;
-            }
-        </style>
+        
     </head>
     
 
@@ -18,13 +14,15 @@
         <header>
             <h1>Computer Virus</h1>
         </header>
-        <nav>
-            <hr width = "50%"/>
-            <a href="main.html">Home</a>
-            <a id="border" href="viruses.html">Viruses</a>
-            <a href="action.html">Action</a>
-            <a href="prevention.html">Prevention</a>
-        </nav>
+
+        <body>
+        
+        <ul id="menu">
+          <li class="menu_li"><a href="index.php">Home</a></li>
+          <li class="menu_li"><a class="active" href="viruses.php">Viruses</a></li>
+          <li class="menu_li"><a href="action.php">Action</a></li>
+          <li class="menu_li"><a href="prevention.php">Prevention</a></li>
+        </ul>
         
         <main>
             <div>
@@ -49,7 +47,7 @@
         
         <footer>
             <hr><br/>
-            <div>
+            <div id="source">
                 <p>Sources : </p>
                 <a class="site" href="https://fr.wikipedia.org/wiki/Virus_informatique">Wikipedia</a>
                 <a class="site" href="https://support.microsoft.com/fr-fr/help/129972/how-to-prevent-and-remove-viruses-and-other-malware">Microsoft</a>

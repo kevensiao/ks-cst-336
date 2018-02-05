@@ -7,11 +7,6 @@
         
         <link href="css/styles.css" rel="stylesheet" type="text/css"/>
         
-        <style>
-            #border {
-                border-bottom :2px blue solid;
-            }
-        </style>
     </head>
     
 
@@ -19,19 +14,22 @@
         <header>
             <h1>Computer Virus</h1>
         </header>
-        <nav>
-            <hr width = "50%"/>
-            <a id="border" href="main.html">Home</a>
-            <a href="viruses.html">Viruses</a>
-            <a href="action.html">Action</a>
-            <a href="prevention.html">Prevention</a>
-        </nav>
+
+        <body>
+        
+        <ul id="menu">
+          <li class="menu_li"><a class="active" href="index.php">Home</a></li>
+          <li class="menu_li"><a href="viruses.php">Viruses</a></li>
+          <li class="menu_li"><a href="action.php">Action</a></li>
+          <li class="menu_li"><a href="prevention.php">Prevention</a></li>
+        </ul>
+
         
         <main>
             <div>
                 <h2>What is a Computer Virus ?</h2>
                 <img id="virus"src="img/virus.jpg" alt="Virus" />
-                <p>A computer virus is a small computer-to-computer software that disrupts the operation of a machine. A computer virus can damage or delete data from the computer, use an e-mail program to 
+                <p>A <b>computer virus</b> is a small computer-to-computer software that disrupts the operation of a machine. A computer virus can damage or delete data from the computer, use an e-mail program to 
                 transmit to other computers, or erase any item stored on the hard disk.</br></br>
 
 
@@ -43,7 +41,7 @@
             <div class="stop">
                 <h2>What is a worm ?</h2>
                 <img id="worm" src="img/worm.jpeg" alt="worm" />
-                <p>A worm is a computer code that spreads without user intervention. Most worms are in attachments that infect a computer as soon as they are opened. The worm scans the infected computer 
+                <p>A <b>worm</b> is a computer code that spreads without user intervention. Most worms are in attachments that infect a computer as soon as they are opened. The worm scans the infected computer 
                 for files, such as address books or temporary web pages, that contain e-mail addresses. The worm uses addresses to send infected e-mail messages and frequently replicates (or impersonates) 
                 sender addresses in recent messages so that infected messages appear to come from someone you know. Worms then propagate automatically via e-mail messages, networks, or operating system 
                 vulnerabilities, often overwriting these systems before the cause is known. Worms are not always harmful to computers, but they usually cause performance and stability problems on the 
@@ -62,7 +60,7 @@
 
         <footer>
             <hr><br/>
-            <div>
+            <div id="source">
                 <p>Sources : </p>
                 <a class="site" href="https://fr.wikipedia.org/wiki/Virus_informatique">Wikipedia</a>
                 <a class="site" href="https://support.microsoft.com/fr-fr/help/129972/how-to-prevent-and-remove-viruses-and-other-malware">Microsoft</a>

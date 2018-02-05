@@ -3,7 +3,7 @@ h1{
     font-family: OCR A Std, monospace;
 }
 
-nav , h2{
+#menu , h2{
     font-family: DejaVu Sans Mono, monospace;
 }
 
@@ -16,7 +16,7 @@ body{
     color : black;
 }
 
-header, nav, footer{
+header, footer{
     text-align: center;
 }
 
@@ -24,18 +24,38 @@ main {
     padding-top: 20px;
 }
 
-nav a{
-    padding: 15px;
-    padding-bottom: 4px;
-    font-size: 1.8em;
-    text-decoration: none;
-    color: white;
-}
 
-nav a:hover{
-    border-bottom :2px blue solid;
-    font-size: 2em;
-    transition: .7s
+#menu{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+}
+    
+.menu_li {
+    float: left;
+    border-right:1px solid #bbb;
+}
+        
+.menu_li:last-child {
+    border-right: none;
+}
+    
+.menu_li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+    
+.menu_li a:hover:not(.active) {
+    background-color: #111;
+}
+        
+.active {
+    background-color: #819FF7;
 }
 
 footer{
@@ -64,6 +84,7 @@ footer{
 #virus{
     float: left;
     padding-right: 15px;
+    padding-bottom: 20px;
 }
 
 #protection{
@@ -96,4 +117,8 @@ footer{
 
 .stop{
     clear :left;
+}
+
+#source{
+    font-style: italic;
 }

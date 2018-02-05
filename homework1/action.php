@@ -6,11 +6,7 @@
         <title>Keven SIAO : Virus</title>
         
         <link href="css/styles.css" rel="stylesheet" type="text/css"/>
-        <style>
-            #border {
-                border-bottom :2px blue solid;
-            }
-        </style>
+        
     </head>
     
 
@@ -18,13 +14,15 @@
         <header>
             <h1>Computer Virus</h1>
         </header>
-        <nav>
-            <hr width = "50%"/>
-            <a href="main.html">Home</a>
-            <a href="viruses.html">Viruses</a>
-            <a id="border" href="action.html">Action</a>
-            <a href="prevention.html">Prevention</a>
-        </nav>
+
+        <body>
+        
+        <ul id="menu">
+          <li class="menu_li"><a href="index.php">Home</a></li>
+          <li class="menu_li"><a href="viruses.php">Viruses</a></li>
+          <li class="menu_li"><a class="active" href="action.php">Action</a></li>
+          <li class="menu_li"><a href="prevention.php">Prevention</a></li>
+        </ul>
         
         <main>
             <div>
@@ -38,7 +36,7 @@
             </div>
             
             <div>
-                <h2>How do they spread ?</h2>
+                <h2>How do they invade you ?</h2>
                 <ul>
                     <li class="list">When the file or software on which they are grafted is sent from one infected computer to another on the same network;</li>
                     <li class="list">Through an email message or a compromised attachment;</li>
@@ -47,7 +45,7 @@
             </div>
             
             <div>
-                <h2>Which devices are infected ?</h2>
+                <h2>Which devices do they attack ?</h2>
                 <p>Viruses mainly target computers. Computer programs can be offered online without any prior review, with a significant risk of infection by a virus. That's why it's mainly computers that 
                 are targeted.</br></br>
 
@@ -63,7 +61,7 @@
         
         <footer>
             <hr><br/>
-            <div>
+            <div id="source">
                 <p>Sources : </p>
                 <a class="site" href="https://fr.wikipedia.org/wiki/Virus_informatique">Wikipedia</a>
                 <a class="site" href="https://support.microsoft.com/fr-fr/help/129972/how-to-prevent-and-remove-viruses-and-other-malware">Microsoft</a>

@@ -6,11 +6,7 @@
         <title>Keven SIAO : Virus</title>
         
         <link href="css/styles.css" rel="stylesheet" type="text/css"/>
-        <style>
-            #border {
-                border-bottom :2px blue solid;
-            }
-        </style>
+        
     </head>
     
 
@@ -18,17 +14,19 @@
         <header>
             <h1>Computer Virus</h1>
         </header>
-        <nav>
-            <hr width = "50%"/>
-            <a href="main.html">Home</a>
-            <a href="viruses.html">Viruses</a>
-            <a href="action.html">Action</a>
-            <a id="border" href="prevention.html">Prevention</a>
-        </nav>
+
+        <body>
+        
+        <ul id="menu">
+          <li class="menu_li"><a href="index.php">Home</a></li>
+          <li class="menu_li"><a href="viruses.php">Viruses</a></li>
+          <li class="menu_li"><a href="action.php">Action</a></li>
+          <li class="menu_li"><a class="active" href="prevention.php">Prevention</a></li>
+        </ul>
         
         <main>
             <div>
-                <h2>How to protect yourself ?</h2>
+                <h2>Make sure to protect yourself !</h2>
                 <p>Knowing the threats and taking appropriate action will reduce the risk of your computer or device getting infected. One of the best ways to protect yourself from viruses is to install 
                 comprehensive Internet security software on all your devices, and keep it up to date. Make sure the firewall on your computer is turned on and do regular scans. Otherwise :</p>
                 <img id="protection" src="img/protection.jpg" alt="Protection" /> 
@@ -48,7 +46,7 @@
             </div>
             
             <div>
-                <h2>What to do if your computer is infected</h2>
+                <h2>Your computer is infected ?</h2>
                 <img id="detected" src="img/virus_detected.jpg" alt="detected" /> 
                 <p>Do an analysis. Your Internet security software may be able to identify and manage intrusions that would have escaped its defenses. Follow the instructions of the program to handle the 
                 threat.</br></br>
@@ -62,7 +60,7 @@
             </div>
             
             <div>
-                <h2>Maintain your defense</h2>
+                <h2>Do not let your guard down !</h2>
                 <p>Malware can be a major source of irritation and disruption. More seriously, they can corrupt or delete files, and steal your confidential data. And if a virus is not stopped, it can 
                 reproduce and spread, causing damage to other people.</br></br>
 
@@ -72,7 +70,7 @@
         
         <footer>
             <hr><br/>
-            <div>
+            <div id="source">
                 <p>Sources : </p>
                 <a class="site" href="https://fr.wikipedia.org/wiki/Virus_informatique">Wikipedia</a>
                 <a class="site" href="https://support.microsoft.com/fr-fr/help/129972/how-to-prevent-and-remove-viruses-and-other-malware">Microsoft</a>
