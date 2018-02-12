@@ -9,6 +9,7 @@
             <h2>Labs</h2>
             <ol>
                 <li><a href="/PersonalPortfolio">Lab1</a></li>
+                <li><a href="/Lab2">Lab2</a></li>
             </ol>
         </div>
         
