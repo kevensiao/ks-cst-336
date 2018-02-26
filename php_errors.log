@@ -269,3 +269,30 @@
 [12-Feb-2018 02:24:59 UTC] PHP 254. play() /home/ubuntu/workspace/Lab2/inc/functions.php:24
 [12-Feb-2018 02:24:59 UTC] PHP 255. displayPoints() /home/ubuntu/workspace/Lab2/inc/functions.php:46
 [12-Feb-2018 02:24:59 UTC] PHP 256. play() /home/ubuntu/workspace/Lab2/inc/functions.php:24
+[12-Feb-2018 17:33:05 UTC] PHP Parse error:  syntax error, unexpected '<' in /home/ubuntu/workspace/Examples/challenge.php on line 41
+[12-Feb-2018 17:36:34 UTC] PHP Parse error:  syntax error, unexpected end of file in /home/ubuntu/workspace/Examples/challenge.php on line 86
+[12-Feb-2018 17:46:42 UTC] PHP Parse error:  syntax error, unexpected end of file in /home/ubuntu/workspace/Examples/challenge.php on line 89
+[14-Feb-2018 16:50:01 UTC] PHP Parse error:  syntax error, unexpected end of file in /home/ubuntu/workspace/Examples/challenge.php on line 89
+[14-Feb-2018 16:58:17 UTC] PHP Parse error:  syntax error, unexpected 'do' (T_DO) in /home/ubuntu/workspace/Examples/challenge.php on line 38
+[14-Feb-2018 17:28:50 UTC] PHP Fatal error:  Maximum execution time of 300 seconds exceeded in /home/ubuntu/workspace/Examples/challenge.php on line 58
+[14-Feb-2018 17:28:50 UTC] PHP Stack trace:
+[14-Feb-2018 17:28:50 UTC] PHP   1. {main}() /home/ubuntu/workspace/Examples/challenge.php:0
+[26-Feb-2018 06:59:58 UTC] PHP Warning:  Invalid argument supplied for foreach() in /home/ubuntu/workspace/assignment2/process.php on line 44
+[26-Feb-2018 06:59:58 UTC] PHP Stack trace:
+[26-Feb-2018 06:59:58 UTC] PHP   1. {main}() /home/ubuntu/workspace/assignment2/process.php:0
+[26-Feb-2018 07:05:33 UTC] PHP Warning:  Invalid argument supplied for foreach() in /home/ubuntu/workspace/assignment2/process.php on line 41
+[26-Feb-2018 07:05:33 UTC] PHP Stack trace:
+[26-Feb-2018 07:05:33 UTC] PHP   1. {main}() /home/ubuntu/workspace/assignment2/process.php:0
+[26-Feb-2018 07:06:42 UTC] PHP Warning:  Invalid argument supplied for foreach() in /home/ubuntu/workspace/assignment2/process.php on line 41
+[26-Feb-2018 07:06:42 UTC] PHP Stack trace:
+[26-Feb-2018 07:06:42 UTC] PHP   1. {main}() /home/ubuntu/workspace/assignment2/process.php:0
+[26-Feb-2018 07:06:46 UTC] PHP Warning:  Invalid argument supplied for foreach() in /home/ubuntu/workspace/assignment2/process.php on line 41
+[26-Feb-2018 07:06:46 UTC] PHP Stack trace:
+[26-Feb-2018 07:06:46 UTC] PHP   1. {main}() /home/ubuntu/workspace/assignment2/process.php:0
+[26-Feb-2018 07:08:24 UTC] PHP Warning:  Invalid argument supplied for foreach() in /home/ubuntu/workspace/assignment2/process.php on line 41
+[26-Feb-2018 07:08:24 UTC] PHP Stack trace:
+[26-Feb-2018 07:08:24 UTC] PHP   1. {main}() /home/ubuntu/workspace/assignment2/process.php:0
+[26-Feb-2018 07:08:34 UTC] PHP Warning:  Invalid argument supplied for foreach() in /home/ubuntu/workspace/assignment2/process.php on line 41
+[26-Feb-2018 07:08:34 UTC] PHP Stack trace:
+[26-Feb-2018 07:08:34 UTC] PHP   1. {main}() /home/ubuntu/workspace/assignment2/process.php:0
+[26-Feb-2018 07:19:29 UTC] PHP Parse error:  syntax error, unexpected '$_POST' (T_VARIABLE), expecting ',' or ';' in /home/ubuntu/workspace/assignment2/process.php on line 46

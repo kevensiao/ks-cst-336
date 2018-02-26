@@ -9,3 +9,6 @@ echo 'Hello world from Cloud9!';
 ?>
 </body>
 </html>
+php works
+form
+cookies

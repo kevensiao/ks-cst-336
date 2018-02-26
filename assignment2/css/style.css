@@ -1,0 +1,33 @@
+body{
+    
+    background: linear-gradient(lightgrey, grey);
+    background-repeat: no-repeat;
+    font-family: cambria;
+    text-align:justify;
+}
+h1{
+    font-size: 50px;
+    font-family: comic sans ms;
+    text-shadow:3px 5px 15px black;
+    padding : 10px;
+}
+.form{
+    margin: auto;
+    background-color: grey ;
+    width: 40%;
+    color: black;
+    padding-bottom: 10px;
+    border-radius: 30px;
+    padding-left: 20%;
+    border : 5px solid black;
+}
+
+.submit{
+    margin-left: 9%;
+    padding-top: 10px;
+
+}
+h3{
+    color: darkred;
+    font-style:italic;
+}

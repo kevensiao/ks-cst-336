@@ -1,0 +1,64 @@
+.hand,.score,.player,.winner{
+    display: inline-block;
+    vertical-align: middle;
+    text-align:center;
+}
+.player img{
+    width:96px;
+    height:96px;
+    border:5px solid;
+    border-radius:5%;
+}
+.hand{
+    margin:10px;
+}
+.score{
+    margin-right:10px;
+    width:50px;
+    padding:20px;
+    border:8px solid;
+    border-color:brown;
+    border-radius: 20%;
+    font-size:300%;
+    background-color:rgba(0,200,0,1);
+}
+.winner{
+    padding:20px;
+    width:150px;
+    font-size:300%;
+    text-decoration: underline;
+    border:8px solid;
+    border-color:brown;
+    border-radius:10%;
+    background-color:rgba(0,200,0,1);
+}
+html{
+    height: 100%;
+}
+body{
+    background-image: url("board.jpg");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+.super{
+    background-color:rgba(0,200,0,.8);
+    text-align:center;
+    width:90%;
+    max-width: 1300px;
+    min-width: 1000px;
+    margin-left:auto;
+    margin-right:auto;
+    border:4px solid;
+    border-radius:10%;
+    border-color:black;
+}
+.seat{
+    margin:auto 0;
+    padding:10px;
+}
+.hand img{
+    margin:2px;
+    border:1px solid;
+    border-radius: 5px;
+    border-color: black;
+}

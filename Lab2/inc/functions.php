@@ -21,13 +21,16 @@
             switch ($randomValue1){
                 case 0: $totalPoints = 1000;
                     echo "<h1>Jackpot!</h1>";
-                    echo '<embed height="60" type="audio/midi" width="144" src="jackpot.mp3" volume="60" loop="false" autostart="false" />';
+                    echo "<embed height='60' type='audio/midi' width='144' src='jackpot.mp3' volume='60' loop='false' autostart='false' />";
                     break;
                 case 1: $totalPoints = 500;
+                    echo "<embed height='60' type='audio/midi' width='144' src='jackpot.mp3' volume='60' loop='false' autostart='false' />";
                     break;
                 case 2: $totalPoints = 250;
+                    echo "<embed height='60' type='audio/midi' width='144' src='jackpot.mp3' volume='60' loop='false' autostart='false' />";
                     break;
                 case 3: $totalPoints = 900;
+                    echo "<embed height='60' type='audio/midi' width='144' src='jackpot.mp3' volume='60' loop='false' autostart='false' />";
                     break;
             }
             

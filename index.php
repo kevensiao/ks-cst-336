@@ -14,9 +14,10 @@
         </div>
         
         <div>
-            <h2>Homeworks</h2>
+            <h2>Assignmments</h2>
             <ol>
-                <li><a href="/homework1">Homework1</a></li>
+                <li><a href="/homework1">Assignement 1</a></li>
+                <li><a href="/assignment2">Assignement 2</a></li>
             </ol>
         </div>
 
