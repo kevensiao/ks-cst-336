@@ -25,7 +25,7 @@
             <form action="process.php" method="POST">
                 <div>
                     <br><br><label>Enter your name: </label>
-                    <input type="text" name="name" value="No name"/>
+                    <input type="text" name="name" required/>
                 </div>
                 
                 <div>
@@ -44,7 +44,7 @@
                 
                 <div>
                     <h2>Choose a color</h2>
-                    <input type="radio" name="color" value="Black">Black<br>
+                    <input type="radio" name="color" value="Black" checked>Black<br>
                     <input type="radio" name="color" value="White">White<br>
                     <input type="radio" name="color" value="Blue">Blue<br>
                     <input type="radio" name="color" value="Green">Green<br>
@@ -55,13 +55,13 @@
                 
                 <div>
                     <label>Name your new baby :</label>
-                    <input type="text" name="car_name" value="No name"/>
+                    <input type="text" name="car_name" required/>
                 </div>
                 
                 
                 <div>
-                    <h2>Pick some extra options</h2>
-                    <input type="checkbox" name="options[]" value="Chrome">Chrome<br>
+                    <h2>Pick some extra options</h2> <!--The options are not required because there are options-->
+                    <input type="checkbox" name="options[]" value="Chrome">Chrome<br> 
                     <input type="checkbox" name="options[]" value="Leather seat">Leather seats<br>
                     <input type="checkbox" name="options[]" value="Voice control">Voice control<br>
                     <input type="checkbox" name="options[]" value="Seat heating">Seat heating<br>
@@ -71,13 +71,13 @@
                 
                 <div>
                     <h2>Anything else to perfect your car ?</h2>
-                    <textarea name="message" rows="10" cols="50"></textarea>
+                    <textarea name="message" rows="10" cols="50" required></textarea>
                 </div>
                 
                 
                 <div>
                     <h2>Do you want a receipt </h2>
-                    <select name="receipt" size="2" multiple>
+                    <select name="receipt" size="2" multiple required>
                         <option value="Yes">Yes</option>
                         <option value="No">No</option>
                     </select>
