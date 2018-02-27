@@ -296,3 +296,9 @@
 [26-Feb-2018 07:08:34 UTC] PHP Stack trace:
 [26-Feb-2018 07:08:34 UTC] PHP   1. {main}() /home/ubuntu/workspace/assignment2/process.php:0
 [26-Feb-2018 07:19:29 UTC] PHP Parse error:  syntax error, unexpected '$_POST' (T_VARIABLE), expecting ',' or ';' in /home/ubuntu/workspace/assignment2/process.php on line 46
+[26-Feb-2018 23:17:33 UTC] PHP Parse error:  syntax error, unexpected 'player' (T_STRING), expecting ',' or ';' in /home/ubuntu/workspace/Lab3/index.php on line 110
+[26-Feb-2018 23:17:46 UTC] PHP Parse error:  syntax error, unexpected 'player' (T_STRING), expecting ',' or ';' in /home/ubuntu/workspace/Lab3/index.php on line 110
+[26-Feb-2018 23:17:47 UTC] PHP Parse error:  syntax error, unexpected 'player' (T_STRING), expecting ',' or ';' in /home/ubuntu/workspace/Lab3/index.php on line 110
+[26-Feb-2018 23:21:25 UTC] PHP Parse error:  syntax error, unexpected 'player' (T_STRING), expecting ',' or ';' in /home/ubuntu/workspace/Lab3/index.php on line 110
+[27-Feb-2018 00:40:19 UTC] PHP Parse error:  syntax error, unexpected '[' in /home/ubuntu/workspace/Lab3/index.php on line 135
+[27-Feb-2018 00:42:20 UTC] PHP Parse error:  syntax error, unexpected '$hand' (T_VARIABLE), expecting ',' or ';' in /home/ubuntu/workspace/Lab3/index.php on line 133
