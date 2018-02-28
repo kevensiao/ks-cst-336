@@ -20,17 +20,11 @@
             <?php
                 $price = 0;
                 
-                if(empty($_POST['car']))
+                if(!empty($_POST['car']))
                 {
-                    $car = "Choose a car!";
-                    echo $car;
-                }
-                else
-                {
-                   echo $_POST['car'] . ":  \$39 000<br>";
+                    echo $_POST['car'] . ":  \$39 000<br>";
                    $price += 39000;
                 }
-
                 if(!empty($_POST['color']))
                 {
                     echo $_POST['color'] . ":  \$1 000<br>";

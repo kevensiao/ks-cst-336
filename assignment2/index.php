@@ -15,7 +15,7 @@
                 <form></form>
                 <form oninput="x.value=parseInt(a.value) * 1000">
                     $0
-                    <input type="range" name="a" value="50">
+                    <input type="range" name="a" value="50" >
                     $100 000<br>
                     Budget :
                     $<output name="x">0</output>
