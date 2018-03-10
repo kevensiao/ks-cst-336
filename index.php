@@ -10,7 +10,7 @@
             <ol>
                 <li><a href="/PersonalPortfolio">Lab1 Portfolio</a></li>
                 <li><a href="/Lab2">Lab2 Slotmachine</a></li>
-                <li><a href="/Lab3/index.php">Lab3 Silverjack</a></li>
+                <li><a href="/Lab3.1/">Lab3 Silverjack</a></li>
             </ol>
         </div>
         
