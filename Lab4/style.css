@@ -1,0 +1,43 @@
+body{
+	background-color: black;
+	font-family: 'Amatic SC', cursive;
+	width: 99%;
+	height: 100%;
+	font-size: 25px;
+	color: white;
+}
+
+#item {
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    border: 1px solid darkblue;
+}
+
+#menu {
+    border: 1px solid green;
+    width: 22%;
+    height: 100%;
+    float: left;
+}
+#select_type, #select_name, #availability {
+    border-bottom: 1px solid green;
+    padding-bottom: 6px;
+    text-align: center;
+}
+h1{
+    text-align: center;
+    color: #890000;
+}
+.red{
+    color: red;
+}
+#list{
+    text-align: center;
+}
+.device_color{
+    color: blue;
+}
+
+

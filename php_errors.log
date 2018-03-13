@@ -302,3 +302,42 @@
 [26-Feb-2018 23:21:25 UTC] PHP Parse error:  syntax error, unexpected 'player' (T_STRING), expecting ',' or ';' in /home/ubuntu/workspace/Lab3/index.php on line 110
 [27-Feb-2018 00:40:19 UTC] PHP Parse error:  syntax error, unexpected '[' in /home/ubuntu/workspace/Lab3/index.php on line 135
 [27-Feb-2018 00:42:20 UTC] PHP Parse error:  syntax error, unexpected '$hand' (T_VARIABLE), expecting ',' or ';' in /home/ubuntu/workspace/Lab3/index.php on line 133
+[12-Mar-2018 15:51:32 UTC] PHP Parse error:  syntax error, unexpected '$bdd' (T_VARIABLE) in /home/ubuntu/workspace/Lab4/index.php on line 70
+[12-Mar-2018 16:44:51 UTC] PHP Parse error:  syntax error, unexpected '$bdd' (T_VARIABLE) in /home/ubuntu/workspace/Lab4/index.php on line 70
+[12-Mar-2018 16:46:09 UTC] PHP Parse error:  syntax error, unexpected '$bdd' (T_VARIABLE) in /home/ubuntu/workspace/Lab4/index.php on line 70
+[12-Mar-2018 16:46:53 UTC] PHP Parse error:  syntax error, unexpected '$bdd' (T_VARIABLE) in /home/ubuntu/workspace/Lab4/index.php on line 70
+[12-Mar-2018 16:46:56 UTC] PHP Parse error:  syntax error, unexpected '$bdd' (T_VARIABLE) in /home/ubuntu/workspace/Lab4/index.php on line 70
+[12-Mar-2018 16:52:29 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[HY000] [1045] Access denied for user 'kevens'@'localhost' (using password: NO)' in /home/ubuntu/workspace/Lab4/index.php:69
+Stack trace:
+#0 /home/ubuntu/workspace/Lab4/index.php(69): PDO->__construct('mysql:host=loca...', 'kevens', '')
+#1 {main}
+  thrown in /home/ubuntu/workspace/Lab4/index.php on line 69
+[12-Mar-2018 23:23:08 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[HY000] [1045] Access denied for user 'kevens'@'localhost' (using password: NO)' in /home/ubuntu/workspace/Lab4/index.php:70
+Stack trace:
+#0 /home/ubuntu/workspace/Lab4/index.php(70): PDO->__construct('mysql:host=loca...', 'kevens', '')
+#1 {main}
+  thrown in /home/ubuntu/workspace/Lab4/index.php on line 70
+[12-Mar-2018 23:23:39 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[HY000] [1045] Access denied for user 'kevensiao'@'localhost' (using password: NO)' in /home/ubuntu/workspace/Lab4/index.php:70
+Stack trace:
+#0 /home/ubuntu/workspace/Lab4/index.php(70): PDO->__construct('mysql:host=loca...', 'kevensiao', '')
+#1 {main}
+  thrown in /home/ubuntu/workspace/Lab4/index.php on line 70
+[13-Mar-2018 04:19:30 UTC] PHP Parse error:  syntax error, unexpected '$input' (T_VARIABLE), expecting ',' or ';' in /home/ubuntu/workspace/Lab4/index.php on line 73
+[13-Mar-2018 04:25:30 UTC] PHP Fatal error:  Call to a member function fetch() on a non-object in /home/ubuntu/workspace/Lab4/index.php on line 118
+[13-Mar-2018 04:25:30 UTC] PHP Stack trace:
+[13-Mar-2018 04:25:30 UTC] PHP   1. {main}() /home/ubuntu/workspace/Lab4/index.php:0
+[13-Mar-2018 04:25:48 UTC] PHP Fatal error:  Call to a member function fetch() on a non-object in /home/ubuntu/workspace/Lab4/index.php on line 118
+[13-Mar-2018 04:25:48 UTC] PHP Stack trace:
+[13-Mar-2018 04:25:48 UTC] PHP   1. {main}() /home/ubuntu/workspace/Lab4/index.php:0
+[13-Mar-2018 04:26:18 UTC] PHP Fatal error:  Call to a member function fetch() on a non-object in /home/ubuntu/workspace/Lab4/index.php on line 118
+[13-Mar-2018 04:26:18 UTC] PHP Stack trace:
+[13-Mar-2018 04:26:18 UTC] PHP   1. {main}() /home/ubuntu/workspace/Lab4/index.php:0
+[13-Mar-2018 04:26:20 UTC] PHP Fatal error:  Call to a member function fetch() on a non-object in /home/ubuntu/workspace/Lab4/index.php on line 118
+[13-Mar-2018 04:26:20 UTC] PHP Stack trace:
+[13-Mar-2018 04:26:20 UTC] PHP   1. {main}() /home/ubuntu/workspace/Lab4/index.php:0
+[13-Mar-2018 04:30:57 UTC] PHP Fatal error:  Call to a member function fetch() on a non-object in /home/ubuntu/workspace/Lab4/index.php on line 118
+[13-Mar-2018 04:30:57 UTC] PHP Stack trace:
+[13-Mar-2018 04:30:57 UTC] PHP   1. {main}() /home/ubuntu/workspace/Lab4/index.php:0
+[13-Mar-2018 04:58:14 UTC] PHP Fatal error:  Call to a member function fetch() on a non-object in /home/ubuntu/workspace/Lab4/index.php on line 125
+[13-Mar-2018 04:58:14 UTC] PHP Stack trace:
+[13-Mar-2018 04:58:14 UTC] PHP   1. {main}() /home/ubuntu/workspace/Lab4/index.php:0
