@@ -6,9 +6,33 @@
         <link href="https://fonts.googleapis.com/css?family=Amatic+SC" rel="stylesheet">
     </head>
     <body>
-        <h1>Tech Checkout - Device Search</h1>
+        
         
         <div id="menu">
+            
+            <h1>Tech Checkout - Device Search</h1>
+            <div id="availability">
+                <form action="index.php"><br>
+                    <input type="checkbox" name="price" id="price" />Ranked by price</label><br>
+                    
+                    <input type="checkbox" name="available?" id="available?" /> <label for="available?">Available</label>
+                    
+                    <input type="checkbox" name="checkedout?" id="checkedout?" /> <label for="checkedout?">Checked Out</label><br>
+                    
+                    <input type="submit", value="Select">
+                </form> 
+            </div>
+            
+            <div id="select_name">
+                <form action="index.php"><br>
+                    Search by name:<input type="text" name="name" value=""><br>
+                    
+                    <input type="checkbox" name="price" id="price" />Ranked by price</label><br>
+                    
+                    <input type="submit", value="Search">
+                </form> 
+            </div>
+            
             <div id="select_type">
                 <form action="index.php">
                     <select name="type">
@@ -29,29 +53,7 @@
                     
                     <input type="radio" name="order" value="price" />Ranked by price</label><br>
                     
-                    <input type="submit", value="Filter"><br>
-                </form> 
-            </div>
-            
-            <div id="select_name">
-                <form action="index.php"><br>
-                    Search by name:<input type="text" name="name" value=""><br>
-                    
-                    <input type="checkbox" name="price" id="price" />Ranked by price</label><br>
-                    
-                    <input type="submit", value="Search">
-                </form> 
-            </div>
-            
-            <div id="availability">
-                <form action="index.php"><br>
-                    <input type="checkbox" name="price" id="price" />Ranked by price</label><br>
-                    
-                    <input type="checkbox" name="available?" id="available?" /> <label for="available?">Available</label>
-                    
-                    <input type="checkbox" name="checkedout?" id="checkedout?" /> <label for="checkedout?">Checked Out</label><br>
-                    
-                    <input type="submit", value="Select">
+                    <input type="submit", value="Filter">
                 </form> 
             </div>
         </div>
@@ -158,7 +160,7 @@
                         echo '<span class="red">'. $data['status'] .'</span>';
                     }
                     else {
-                        echo '<span class="blue">'. $data['status'] .'</span>';
+                        echo '<span class="green">'. $data['status'] .'</span>';
                     }
                     ?>
                     
