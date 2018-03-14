@@ -25,9 +25,9 @@
                         <option value="Tripod">Tripod</option>
                     </select><br>
                     
-                    <input type="checkbox" name="item_name" id="item_name" />Ranked by name</label>
+                    <input type="radio" name="order" value="item_name" />Ranked by name</label>
                     
-                    <input type="checkbox" name="price" id="price" />Ranked by price</label><br>
+                    <input type="radio" name="order" value="price" />Ranked by price</label><br>
                     
                     <input type="submit", value="Filter"><br>
                 </form> 
@@ -45,8 +45,6 @@
             
             <div id="availability">
                 <form action="index.php"><br>
-                    <input type="checkbox" name="item_name" id="item_name" />Ranked by name</label>
-                    
                     <input type="checkbox" name="price" id="price" />Ranked by price</label><br>
                     
                     <input type="checkbox" name="available?" id="available?" /> <label for="available?">Available</label>
@@ -61,24 +59,19 @@
       
         <div id="list">
             <?php
-
+        
             $dbConn = new PDO("mysql:host=localhost;dbname=lab4", 'kevens', 'lol');
-            
             
             if ($_GET['type']!='')
             {
                echo 'It is ordered by '. $_GET['type'];
-                if($_GET['price']!=''){
+                if($_GET['order']=='price'){
                     echo ' and price.';
                     $input = $dbConn->query('SELECT * FROM device WHERE deviceType=\'' . $_GET['type'] . '\' ORDER BY price');
                 } 
-                else if ($_GET['item_name']!='') {
+                else if ($_GET['order']=='item_name') {
                     echo ' and name.';
                     $input = $dbConn->query('SELECT * FROM device WHERE deviceType=\'' . $_GET['type'] . '\' ORDER BY deviceName');
-                }
-                else if (($_GET['price']!='') || ($_GET['item_name']!='')){
-                    echo ' , name and price.';
-                    $input = $dbConn->query('SELECT * FROM device WHERE deviceType=\'' . $_GET['type'] . '\' ORDER BY deviceName, price ');
                 }
                 else{
                     $input = $dbConn->query('SELECT * FROM device WHERE deviceType=\'' . $_GET['type'] . '\'');
@@ -90,10 +83,10 @@
                 echo 'It is ordered by '. $_GET['name'];
                 if($_GET['price']!=''){
                     echo ' and price.';
-                    $input = $dbConn->query('SELECT * FROM device WHERE deviceName LIKE \'%'. $_GET['name'] .'%\' ORDER BY price');
+                    $input = $dbConn->query('SELECT * FROM device WHERE deviceName OR deviceType LIKE \'%'. $_GET['name'] .'%\' ORDER BY price');
                 } 
                 else {
-                    $input = $dbConn->query('SELECT * FROM device WHERE deviceName LIKE \'%'. $_GET['name'] .'%\' ORDER BY deviceName');
+                    $input = $dbConn->query('SELECT * FROM device WHERE deviceName OR deviceType LIKE \'%'. $_GET['name'] .'%\' ORDER BY deviceName');
                 }
             } 
             
@@ -139,17 +132,18 @@
             while ($data = $input->fetch())
             {
             ?>
+            
                 <div id="item">
                     <p>
                     <strong>Device</strong> :<em> <?php echo '<span class="device_color">'. $data['deviceName'] .'</span>'; ?></em><br />
                     <u>Type :</u> <?php echo $data['deviceType'] ; ?> <br />
                     <u>Price:</u> $<?php echo $data['price']; ?> <br />
                     <u>Status:</u> <?php 
-                    if ($data['status'] == 'CheckedOut' or $data['status'] == 'Checkedout'){
+                    if ($data['status'] == 'CheckedOut'){
                         echo '<span class="red">'. $data['status'] .'</span>';
                     }
                     else {
-                        echo $data['status'];
+                        echo '<span class="blue">'. $data['status'] .'</span>';
                     }
                     ?>
                     

@@ -11,7 +11,7 @@
                 <li><a href="/PersonalPortfolio">Lab1 Portfolio</a></li>
                 <li><a href="/Lab2">Lab2 Slotmachine</a></li>
                 <li><a href="/Lab3.1/">Lab3 Silverjack</a></li>
-                <li><a href="https://github.com/kevensiao/Lab3">Lab3 Repo</a></li>
+                    <a href="https://github.com/kevensiao/Lab3">Lab3 Repo</a>
                 <li><a href="/Lab4">Lab4 Tech Checkout</a></li>
             </ol>
         </div>

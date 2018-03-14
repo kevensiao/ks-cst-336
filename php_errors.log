@@ -341,3 +341,6 @@ Stack trace:
 [13-Mar-2018 04:58:14 UTC] PHP Fatal error:  Call to a member function fetch() on a non-object in /home/ubuntu/workspace/Lab4/index.php on line 125
 [13-Mar-2018 04:58:14 UTC] PHP Stack trace:
 [13-Mar-2018 04:58:14 UTC] PHP   1. {main}() /home/ubuntu/workspace/Lab4/index.php:0
+[13-Mar-2018 15:41:38 UTC] PHP Fatal error:  Call to a member function fetch() on a non-object in /home/ubuntu/workspace/Lab4/index.php on line 139
+[13-Mar-2018 15:41:38 UTC] PHP Stack trace:
+[13-Mar-2018 15:41:38 UTC] PHP   1. {main}() /home/ubuntu/workspace/Lab4/index.php:0
