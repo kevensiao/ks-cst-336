@@ -23,6 +23,25 @@
                 <li><a href="/assignment2">Assignement 2</a></li>
             </ol>
         </div>
+        
+        <div>
+            <h2>Midterm</h2>
+            <ol>
+                <li><a href="midterm/practice/practice_program1.php">Practice 1</a></li>
+                <li><a href="midterm/practice/practice_program2.php">Practice 2</a></li>
+                <li><a href="midterm/program1.php">MIDTERM Program 1</a></li>
+                <li><a href="midterm/program2.php">MIDTERM Program 2</a></li>
+            </ol>
+        </div>
+        
+        <div>
+            <h2>Teamproject</h2>
+            <ol>
+                <li><a href="/teamproject">Doctor's appointments</a></li>
+            </ol>
+        </div>
+        
+        
 
 
     </body>

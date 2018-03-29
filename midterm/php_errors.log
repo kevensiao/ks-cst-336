@@ -1,0 +1,13 @@
+[26-Mar-2018 22:24:00 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[HY000] [1045] Access denied for user 'etiennedivet'@'localhost' (using password: NO)' in /home/ubuntu/workspace/midterm/practice/practice_program2.php:10
+Stack trace:
+#0 /home/ubuntu/workspace/midterm/practice/practice_program2.php(10): PDO->__construct('mysql:host=loca...', 'etiennedivet', '')
+#1 {main}
+  thrown in /home/ubuntu/workspace/midterm/practice/practice_program2.php on line 10
+[26-Mar-2018 22:24:03 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[HY000] [1045] Access denied for user 'etiennedivet'@'localhost' (using password: NO)' in /home/ubuntu/workspace/midterm/practice/practice_program2.php:10
+Stack trace:
+#0 /home/ubuntu/workspace/midterm/practice/practice_program2.php(10): PDO->__construct('mysql:host=loca...', 'etiennedivet', '')
+#1 {main}
+  thrown in /home/ubuntu/workspace/midterm/practice/practice_program2.php on line 10
+[26-Mar-2018 22:40:46 UTC] PHP Fatal error:  Call to a member function fetch() on a non-object in /home/ubuntu/workspace/midterm/practice/practice_program2.php on line 58
+[26-Mar-2018 22:40:46 UTC] PHP Stack trace:
+[26-Mar-2018 22:40:46 UTC] PHP   1. {main}() /home/ubuntu/workspace/midterm/practice/practice_program2.php:0
