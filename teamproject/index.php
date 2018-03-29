@@ -1,3 +1,9 @@
+<?php
+session_start();
+/* Initialisation du panier */
+$_SESSION['panier'] = array();
+?> 
+
 <!DOCTYPE html>
 <html>
     <head>
@@ -5,26 +11,18 @@
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
         <link href="styles.css" rel="stylesheet" type="text/css" />
         <link href="https://fonts.googleapis.com/css?family=Share+Tech|Share+Tech+Mono" rel="stylesheet"> 
-        
-        <script>
-        // When the user clicks on div, open the popup
-            function myFunction() {
-                var popup = document.getElementById("myPopup");
-                popup.classList.toggle("show");
-            }
-            
-            function myFunction2() {
-                var popup = document.getElementById("myPopup2");
-                popup.classList.toggle("show");
-            }
-        </script>
     </head>
     <body>
         
+        
         <h1>Doctor's appointments</h1>
+            
+
         
         <div id="menu">
             <h2><center><b><u>Select Menu: </u></b></center></h2>
+            
+            Click on a doctor or a patient to get more info.
             
             <div id="select_type">
                 <form action="index.php">
@@ -92,7 +90,6 @@
             <div id="list">
                 <?php
 
-                //$connUrl = getenv('JAWSDB_MARIA_URL');
                 $connUrl = "mysql://trn5zsb0tbly80jw:vac4hxlio0wzkrmb@z1ntn1zv0f1qbh8u.cbetxkdyhwsb.us-east-1.rds.amazonaws.com:3306/mlm03i8f43cxocez";
                 $hasConnUrl = !empty($connUrl);
                 
@@ -107,7 +104,7 @@
                 $username = $hasConnUrl ? $connParts['user'] : getenv('C9_USER');
                 $password = $hasConnUrl ? $connParts['pass'] : '';
                 
-                $dbConn = new PDO("mysql:host=$host;dbname=$dbname", $username, $password);
+                $bdd = new PDO("mysql:host=$host;dbname=$dbname", $username, $password);
                 
                 if ($_GET['symptoms']!='')
                 {
@@ -156,7 +153,9 @@
                 else {
                     $reponse = $bdd->query('SELECT * FROM appointment NATURAL JOIN patient NATURAL JOIN doctor ORDER BY doctor_name');
                 }
-
+                
+                $cmpt1 = 0;
+                $cmpt2 = 100;
                 while ($donnees = $reponse->fetch())
                 {
                 ?>
@@ -165,9 +164,8 @@
                         <br/><br/>
                         <em><b> Date: <?php echo $donnees['date_month']; ?>/<?php echo $donnees['date_day']; ?>/2018 </b></em><br/>
                         
-                    
-                        <div class="popup" onclick="myFunction()"><span id='blue'><b>Doctor : </b></span>  <?php echo $donnees['doctor_name']; ?>
-                            <span class="popuptext" id="myPopup">
+                        <div class="popup" onclick="myFunction(<?php echo $cmpt1 ?>)" ><span id='green'><b>Doctor : </b></span>  <?php echo $donnees['doctor_name']; ?>
+                            <span class="popuptext" id="<?php echo $cmpt1 ?>">
                                 <b>Doctor :</b><br/>
                                 ID : <?php echo $donnees['doctor_id']; ?> <br/>
                                 Name : <?php echo $donnees['doctor_name']; ?> <br/>
@@ -177,23 +175,38 @@
  
                         </div><br/>
                         
-                        <div class="popup" onclick="myFunction2()">Patient : <?php echo $donnees['patient_name']; ?> 
-                            <span class="popuptext" id="myPopup2">
+                        <div class="popup" onclick="myFunction2(<?php echo $cmpt2 ?>)">Patient : <?php echo $donnees['patient_name']; ?> 
+                            <span class="popuptext" id="<?php echo $cmpt2 ?>">
                                 <b>Patient :</b><br/>
                                 ID : <?php echo $donnees['patient_id']; ?> <br/>
                                 Name : <?php echo $donnees['patient_name']; ?> <br/>
                                 Phone : <?php echo $donnees['patient_phone']; ?> <br/>
                                 Address : <?php echo $donnees['patient_address']; ?> <br/>
-                                
-                            </span>
                         </div><br/>
+                        
+                        <script>
+                        // When the user clicks on div, open the popup
+                            function myFunction(x) {
+                                var popup = document.getElementById(x);
+                                popup.classList.toggle("show");
+                            }
+                            
+                            function myFunction2(y) {
+                                var popup = document.getElementById(y);
+                                popup.classList.toggle("show");
+                            }
+                        </script>
                         
                         Symptoms : <?php echo $donnees['symptoms']; ?> <br /> 
                         </p>
                                         
                         <button  type="button" class="btn btn-outline-success">Select this appointment</button><br> <br/>
-                         
                     </div>
+                    <?php 
+                    $cmpt1++ ;
+                    $cmpt2++ ;
+                    ?>
+                    
                 <?php
                 }
                 $reponse->closeCursor();
