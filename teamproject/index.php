@@ -16,9 +16,14 @@ $_SESSION['panier'] = array();
         
         
         <h1>Doctor's appointments</h1>
-            
-
         
+        <div id ="gotocart">   
+        Click here to see the selected appointments
+            <a href="basket.php">
+            <img id="cart" alt="cart" src="Medicine.png" >
+            </a>
+        </div>    
+
         <div id="menu">
             <h2><center><b><u>Select Menu: </u></b></center></h2>
             
@@ -103,7 +108,7 @@ $_SESSION['panier'] = array();
                 $dbname = $hasConnUrl ? ltrim($connParts['path'],'/') : 'crime_tips';
                 $username = $hasConnUrl ? $connParts['user'] : getenv('C9_USER');
                 $password = $hasConnUrl ? $connParts['pass'] : '';
-                
+
                 $bdd = new PDO("mysql:host=$host;dbname=$dbname", $username, $password);
                 
                 if ($_GET['symptoms']!='')
@@ -184,23 +189,10 @@ $_SESSION['panier'] = array();
                                 Address : <?php echo $donnees['patient_address']; ?> <br/>
                         </div><br/>
                         
-                        <script>
-                        // When the user clicks on div, open the popup
-                            function myFunction(x) {
-                                var popup = document.getElementById(x);
-                                popup.classList.toggle("show");
-                            }
-                            
-                            function myFunction2(y) {
-                                var popup = document.getElementById(y);
-                                popup.classList.toggle("show");
-                            }
-                        </script>
-                        
                         Symptoms : <?php echo $donnees['symptoms']; ?> <br /> 
                         </p>
                                         
-                        <button  type="button" class="btn btn-outline-success">Select this appointment</button><br> <br/>
+                        <button  type="button" class="btn btn-outline-success" onclick="addtoCart()">Select this appointment</button><br> <br/>
                     </div>
                     <?php 
                     $cmpt1++ ;
@@ -213,5 +205,22 @@ $_SESSION['panier'] = array();
                 ?>
         </div>
 
+        <script>
+        // When the user clicks on div, open the popup
+            function myFunction(x) {
+                var popup = document.getElementById(x);
+                popup.classList.toggle("show");
+            }
+            
+            function myFunction2(y) {
+                var popup = document.getElementById(y);
+                popup.classList.toggle("show");
+            }
+            
+            function addtoCart(){
+                
+            }
+        </script>
     </body>
 </html>
+

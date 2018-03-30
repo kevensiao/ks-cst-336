@@ -25,7 +25,7 @@ h2{
 
 
 #item {
-    border-bottom: 1px solid #6bc1ff;
+    border-bottom: 1px solid green;
     width: 70%;
     margin-left: auto;
     margin-right: auto;
@@ -35,7 +35,7 @@ h2{
 
 #menu {
     margin-left: -15px;
-    margin-top: 4%;
+    margin-top: 5%;
     width: 30%;
     height: 100px;
     float:left;
@@ -124,4 +124,14 @@ h2{
 @keyframes fadeIn {
     from {opacity: 0;}
     to {opacity:1 ;}
+}
+
+
+#gotocart {
+    text-align: center;
+    position: absolute;
+    position: fixed;
+    margin-left : 83%;
+    margin-top : 10%;
+    font-size: 15px;
 }
