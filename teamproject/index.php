@@ -13,9 +13,13 @@ $_SESSION['panier'] = array();
         <link href="https://fonts.googleapis.com/css?family=Share+Tech|Share+Tech+Mono" rel="stylesheet"> 
     </head>
     <body>
-        
-        
+
         <h1>Doctor's appointments</h1>
+        
+        <center>
+        <a href="https://docs.google.com/document/d/1aMjmKiiNVhA_oW65tAbAUKO-USxQ2Y_GD7F9j42eZ4E/edit?usp=sharing">Link to our Google Doc</a><br>
+        <a href="https://trello.com/b/DgmG0MdB/teamproject">Link to our Trello</a>
+        </center>
         
         <div id ="gotocart">   
         Click here to see the selected appointments
