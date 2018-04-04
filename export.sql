@@ -57,7 +57,7 @@ CREATE TABLE `department` (
 
 LOCK TABLES `department` WRITE;
 /*!40000 ALTER TABLE `department` DISABLE KEYS */;
-INSERT INTO `department` VALUES (1,'Mathematics'),(2,'Computer Science'),(3,'Game Design'),(4,'Teacher Education'),(5,'Accounting'),(6,'Biology'),(7,'Finance'),(8,'Music'),(9,'Marketing'),(10,'Biology');
+INSERT INTO `department` VALUES (1,'Mathematics'),(2,'Computer Science'),(3,'Game Design'),(4,'Teacher Education'),(5,'Accounting'),(6,'Biology'),(7,'Finance'),(8,'Music'),(9,'Marketing'),(10,'Social Sciences');
 /*!40000 ALTER TABLE `department` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -99,4 +99,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2018-04-04 16:12:36
+-- Dump completed on 2018-04-04 16:24:13
