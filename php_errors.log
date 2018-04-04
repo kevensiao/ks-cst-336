@@ -570,3 +570,45 @@ Stack trace:
 [29-Mar-2018 15:43:49 UTC] PHP Fatal error:  Call to a member function query() on a non-object in /home/ubuntu/workspace/teamproject/index.php on line 184
 [29-Mar-2018 15:43:49 UTC] PHP Stack trace:
 [29-Mar-2018 15:43:49 UTC] PHP   1. {main}() /home/ubuntu/workspace/teamproject/index.php:0
+[02-Apr-2018 22:19:03 UTC] PHP Warning:  include(../../dbConnection.php): failed to open stream: No such file or directory in /home/ubuntu/workspace/Lab5/loginProcess.php on line 4
+[02-Apr-2018 22:19:03 UTC] PHP Stack trace:
+[02-Apr-2018 22:19:03 UTC] PHP   1. {main}() /home/ubuntu/workspace/Lab5/loginProcess.php:0
+[02-Apr-2018 22:19:03 UTC] PHP Warning:  include(): Failed opening '../../dbConnection.php' for inclusion (include_path='.:/usr/share/php:/usr/share/pear') in /home/ubuntu/workspace/Lab5/loginProcess.php on line 4
+[02-Apr-2018 22:19:03 UTC] PHP Stack trace:
+[02-Apr-2018 22:19:03 UTC] PHP   1. {main}() /home/ubuntu/workspace/Lab5/loginProcess.php:0
+[02-Apr-2018 22:19:03 UTC] PHP Fatal error:  Call to undefined function getDatabaseConnection() in /home/ubuntu/workspace/Lab5/loginProcess.php on line 5
+[02-Apr-2018 22:19:03 UTC] PHP Stack trace:
+[02-Apr-2018 22:19:03 UTC] PHP   1. {main}() /home/ubuntu/workspace/Lab5/loginProcess.php:0
+[02-Apr-2018 22:20:32 UTC] PHP Warning:  include(../../dbConnection.php): failed to open stream: No such file or directory in /home/ubuntu/workspace/Lab5/loginProcess.php on line 4
+[02-Apr-2018 22:20:32 UTC] PHP Stack trace:
+[02-Apr-2018 22:20:32 UTC] PHP   1. {main}() /home/ubuntu/workspace/Lab5/loginProcess.php:0
+[02-Apr-2018 22:20:32 UTC] PHP Warning:  include(): Failed opening '../../dbConnection.php' for inclusion (include_path='.:/usr/share/php:/usr/share/pear') in /home/ubuntu/workspace/Lab5/loginProcess.php on line 4
+[02-Apr-2018 22:20:32 UTC] PHP Stack trace:
+[02-Apr-2018 22:20:32 UTC] PHP   1. {main}() /home/ubuntu/workspace/Lab5/loginProcess.php:0
+[02-Apr-2018 22:20:32 UTC] PHP Fatal error:  Call to undefined function getDatabaseConnection() in /home/ubuntu/workspace/Lab5/loginProcess.php on line 5
+[02-Apr-2018 22:20:32 UTC] PHP Stack trace:
+[02-Apr-2018 22:20:32 UTC] PHP   1. {main}() /home/ubuntu/workspace/Lab5/loginProcess.php:0
+[02-Apr-2018 22:26:21 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[HY000] [1045] Access denied for user 'root'@'localhost' (using password: NO)' in /home/ubuntu/workspace/Lab5/dbConnection.php:16
+Stack trace:
+#0 /home/ubuntu/workspace/Lab5/dbConnection.php(16): PDO->__construct('mysql:host=loca...', 'root', '')
+#1 /home/ubuntu/workspace/Lab5/loginProcess.php(5): getDatabaseConnection()
+#2 {main}
+  thrown in /home/ubuntu/workspace/Lab5/dbConnection.php on line 16
+[02-Apr-2018 22:27:04 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[HY000] [1049] Unknown database 'tcp'' in /home/ubuntu/workspace/Lab5/dbConnection.php:16
+Stack trace:
+#0 /home/ubuntu/workspace/Lab5/dbConnection.php(16): PDO->__construct('mysql:host=loca...', 'kevens', 'lol')
+#1 /home/ubuntu/workspace/Lab5/loginProcess.php(5): getDatabaseConnection()
+#2 {main}
+  thrown in /home/ubuntu/workspace/Lab5/dbConnection.php on line 16
+[02-Apr-2018 22:28:29 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[HY000] [1049] Unknown database 'tcp'' in /home/ubuntu/workspace/Lab5/dbConnection.php:16
+Stack trace:
+#0 /home/ubuntu/workspace/Lab5/dbConnection.php(16): PDO->__construct('mysql:host=loca...', 'kevens', 'lol')
+#1 /home/ubuntu/workspace/Lab5/loginProcess.php(5): getDatabaseConnection()
+#2 {main}
+  thrown in /home/ubuntu/workspace/Lab5/dbConnection.php on line 16
+[04-Apr-2018 04:17:31 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[42S02]: Base table or view not found: 1146 Table 'lab5.tc_admin' doesn't exist' in /home/ubuntu/workspace/Lab5/loginProcess.php:20
+Stack trace:
+#0 /home/ubuntu/workspace/Lab5/loginProcess.php(20): PDOStatement->execute(Array)
+#1 {main}
+  thrown in /home/ubuntu/workspace/Lab5/loginProcess.php on line 20
+[04-Apr-2018 04:50:18 UTC] PHP Parse error:  syntax error, unexpected '}' in /home/ubuntu/workspace/Lab5/index.php on line 66

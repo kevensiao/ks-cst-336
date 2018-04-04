@@ -13,6 +13,7 @@
                 <li><a href="/Lab3.1/">Lab3 Silverjack</a></li>
                     <a href="https://github.com/kevensiao/Lab3">Lab3 Repo</a>
                 <li><a href="/Lab4">Lab4 Tech Checkout</a></li>
+                <li><a href="/Lab5">Lab 5 Authentication / CRUD</a></li>
             </ol>
         </div>
         
