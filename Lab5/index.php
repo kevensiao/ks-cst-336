@@ -30,6 +30,12 @@
                 font-size : 150%;
                 background-color : lightgrey;
             }
+            h1 {
+                color : #660000;
+            }
+            h3 {
+                color : #990000;
+            }
         </style>
         
         <link href="https://fonts.googleapis.com/css?family=Satisfy" rel="stylesheet">
