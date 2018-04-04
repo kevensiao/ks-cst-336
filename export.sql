@@ -46,8 +46,8 @@ DROP TABLE IF EXISTS `department`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `department` (
-  `deptName` varchar(20) NOT NULL,
-  `departmentId` int(5) NOT NULL
+  `departmentId` int(5) NOT NULL,
+  `deptName` varchar(20) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
@@ -57,7 +57,7 @@ CREATE TABLE `department` (
 
 LOCK TABLES `department` WRITE;
 /*!40000 ALTER TABLE `department` DISABLE KEYS */;
-INSERT INTO `department` VALUES ('Maths ',1),('Computer Science',2),('Biology',3),('Business',4),('Politic',5),('Art',6),('Law',7),('Nothing',8);
+INSERT INTO `department` VALUES (1,'Mathematics'),(2,'Computer Science'),(3,'Game Design'),(4,'Teacher Education'),(5,'Accounting'),(6,'Biology'),(7,'Finance'),(8,'Music'),(9,'Marketing'),(10,'Biology');
 /*!40000 ALTER TABLE `department` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -99,4 +99,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2018-04-04  5:32:48
+-- Dump completed on 2018-04-04 16:12:36

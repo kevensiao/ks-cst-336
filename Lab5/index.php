@@ -26,7 +26,13 @@
         <style>
             body {
                 text-align: center;
+                font-family: 'Satisfy', cursive;
+                font-size : 150%;
+                background-color : lightgrey;
             }
+        </style>
+        
+        <link href="https://fonts.googleapis.com/css?family=Satisfy" rel="stylesheet">
         </style>
     </head>
     <body>

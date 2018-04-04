@@ -1,8 +1,10 @@
 <?php
     session_start();
-    if (!isset($_SESSION['username'])) { //validates that admin has indeed logged in
+    if (!isset($_SESSION['username'])) { 
         header("Location: index.php");
     }
+    
+    
     
     $connUrl = "mysql://trn5zsb0tbly80jw:vac4hxlio0wzkrmb@z1ntn1zv0f1qbh8u.cbetxkdyhwsb.us-east-1.rds.amazonaws.com:3306/mlm03i8f43cxocez";
     $hasConnUrl = !empty($connUrl);
@@ -12,19 +14,20 @@
         $connParts = parse_url($connUrl);
     }
     
-    //var_dump($hasConnUrl);
     $host = $hasConnUrl ? $connParts['host'] : getenv('IP');
     $dbname = $hasConnUrl ? ltrim($connParts['path'],'/') : 'crime_tips';
     $username = $hasConnUrl ? $connParts['user'] : getenv('C9_USER');
     $password = $hasConnUrl ? $connParts['pass'] : '';
     
     $bdd = new PDO("mysql:host=$host;dbname=$dbname", $username, $password);
+    
+    
 
     function getDepartmentInfo() {
         global $bdd;        
-        $sql = "SELECT deptName, departmentId 
-                FROM department 
-                ORDER BY deptName";
+        
+        $sql = "SELECT deptName, departmentId FROM department ORDER BY deptName";
+        
         $stmt = $bdd->prepare($sql);
         $stmt->execute();
         $records = $stmt->fetchAll();
@@ -41,25 +44,21 @@
         $role   = $_GET['role'];
         $deptId   = $_GET['deptId'];
         
-        //"INSERT INTO `user` (`userId`, `firstName`, `lastName`, `email`, `gender`, `phone`, `role`, `deptId`) VALUES (NULL, 'a', 'a', 'a', '1', 'm', '1', '1', '1');
+        $sql = "INSERT INTO user (firstName, lastName, email, gender, phone, role, deptId) VALUES (:fName, :lName, :email, :gender, :phone, :role, :deptId)";
         
-        $sql = "INSERT INTO user
-                (firstName, lastName, email, gender, phone, role, deptId)
-                VALUES
-                (:fName, :lName, :email, :gender, :phone, :role, :deptId)";
-        $namedParameters = array();
-        $namedParameters[':fName'] =  $firstName;
-        $namedParameters[':lName'] =  $lastName;
-        $namedParameters[':email'] =  $email;
-        $namedParameters[':gender'] = $gender;
-        $namedParameters[':phone']  = $phone;
-        $namedParameters[':role']   = $role;
-        $namedParameters[':deptId'] = $deptId;
+        $parameters = array();
+        $parameters[':fName'] =  $firstName;
+        $parameters[':lName'] =  $lastName;
+        $parameters[':email'] =  $email;
+        $parameters[':gender'] = $gender;
+        $parameters[':phone']  = $phone;
+        $parameters[':role']   = $role;
+        $parameters[':deptId'] = $deptId;
         
         $stmt = $bdd->prepare($sql);
-        $stmt->execute($namedParameters);
+        $stmt->execute($parameters);
         
-        echo "User has been added successfully!";
+        echo "User has been added successfully! <br>";
     }
 ?>
 
@@ -67,15 +66,30 @@
 <html>
     <head>
         <title> Admin: Adding New User </title>
+        <style>
+            body{
+                font-family: 'Satisfy', cursive;
+                font-size : 150%;
+                background-color : lightgrey;
+            }
+            h1 {
+                color : #660000;
+            }
+            h2 {
+                color : #990000;
+            }
+        </style>
+        
+        <link href="https://fonts.googleapis.com/css?family=Satisfy" rel="stylesheet">
     </head>
     
     <body>
         <a href="admin.php">Back to the menu</a>
-        <h1> Admin Section </h1>
+        <h1> Welcome to the Admin Section </h1>
         <h2> Adding New Users </h2>
     
         <fieldset>
-            <legend>Add New User</legend>
+            <legend><b>Add New User</b></legend>
             
             <form>
                 First Name: <input type="text" name="firstName" required /> <br>

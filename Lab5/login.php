@@ -9,13 +9,14 @@
         $connParts = parse_url($connUrl);
     }
     
-    //var_dump($hasConnUrl);
     $host = $hasConnUrl ? $connParts['host'] : getenv('IP');
     $dbname = $hasConnUrl ? ltrim($connParts['path'],'/') : 'crime_tips';
     $username = $hasConnUrl ? $connParts['user'] : getenv('C9_USER');
     $password = $hasConnUrl ? $connParts['pass'] : '';
     
     $bdd = new PDO("mysql:host=$host;dbname=$dbname", $username, $password);
+
+
 
     $username = $_POST['username'];
     $password = sha1($_POST['password']);
@@ -33,6 +34,6 @@
         $_SESSION['username'] = $record['username'];
         $_SESSION['adminFullName'] = $record['firstName'] . " " . $record['lastName'];
         
-        header("Location: admin.php"); // Redirects to admin portal.
+        header("Location: admin.php"); 
     }
 ?>

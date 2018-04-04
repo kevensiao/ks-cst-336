@@ -5,6 +5,8 @@
         exit();
     }
     
+    
+    
     $connUrl = "mysql://trn5zsb0tbly80jw:vac4hxlio0wzkrmb@z1ntn1zv0f1qbh8u.cbetxkdyhwsb.us-east-1.rds.amazonaws.com:3306/mlm03i8f43cxocez";
     $hasConnUrl = !empty($connUrl);
     
@@ -13,13 +15,13 @@
         $connParts = parse_url($connUrl);
     }
     
-    //var_dump($hasConnUrl);
     $host = $hasConnUrl ? $connParts['host'] : getenv('IP');
     $dbname = $hasConnUrl ? ltrim($connParts['path'],'/') : 'crime_tips';
     $username = $hasConnUrl ? $connParts['user'] : getenv('C9_USER');
     $password = $hasConnUrl ? $connParts['pass'] : '';
     
     $bdd = new PDO("mysql:host=$host;dbname=$dbname", $username, $password);
+
 
     
     function displayUsers() {
@@ -56,7 +58,6 @@
             echo "<td><form action='updateUser.php'><input type='hidden' name='userId' value='".$r['userId']."'><input type='submit' value='Update'></form></td>";
             echo "<td><form action='deleteUser.php' onsubmit='return confirmDelete(\"".$r['firstName']."\")'><input type='hidden' name='userId' value='".$r['userId']."'><input type='submit' value='Delete'></form></td></tr>";
         }
-    
     echo "</table>";
     }
 ?>
@@ -90,8 +91,21 @@
             head, body {
                 text-align: center;
             }
-            
+            body{
+                font-family: 'Satisfy', cursive;
+                font-size : 150%;
+                background-color : lightgrey;
+            }
+            h1 {
+                color : #660000;
+            }
+            h2 {
+                color : #990000;
+            }
+       
         </style>
+        
+        <link href="https://fonts.googleapis.com/css?family=Satisfy" rel="stylesheet">
     </head>
     
     <body>

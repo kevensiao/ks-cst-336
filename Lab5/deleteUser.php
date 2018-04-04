@@ -7,8 +7,7 @@
     if ($hasConnUrl) {
         $connParts = parse_url($connUrl);
     }
-    
-    //var_dump($hasConnUrl);
+
     $host = $hasConnUrl ? $connParts['host'] : getenv('IP');
     $dbname = $hasConnUrl ? ltrim($connParts['path'],'/') : 'crime_tips';
     $username = $hasConnUrl ? $connParts['user'] : getenv('C9_USER');
@@ -17,8 +16,9 @@
     $bdd = new PDO("mysql:host=$host;dbname=$dbname", $username, $password);
 
     
-    $sql = "DELETE FROM user 
-            WHERE userId = " . $_GET['userId'];
+    
+    $sql = "DELETE FROM user WHERE userId = " . $_GET['userId'];
+    
     $stmt = $bdd->prepare($sql);
     $stmt->execute();
     

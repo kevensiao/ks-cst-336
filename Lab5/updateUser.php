@@ -4,6 +4,8 @@
         header("Location: index.php");
     }
     
+    
+    
     $connUrl = "mysql://trn5zsb0tbly80jw:vac4hxlio0wzkrmb@z1ntn1zv0f1qbh8u.cbetxkdyhwsb.us-east-1.rds.amazonaws.com:3306/mlm03i8f43cxocez";
     $hasConnUrl = !empty($connUrl);
     
@@ -11,8 +13,7 @@
     if ($hasConnUrl) {
         $connParts = parse_url($connUrl);
     }
-    
-    //var_dump($hasConnUrl);
+
     $host = $hasConnUrl ? $connParts['host'] : getenv('IP');
     $dbname = $hasConnUrl ? ltrim($connParts['path'],'/') : 'crime_tips';
     $username = $hasConnUrl ? $connParts['user'] : getenv('C9_USER');
@@ -21,11 +22,13 @@
     $bdd = new PDO("mysql:host=$host;dbname=$dbname", $username, $password);
     
     
+    
+    
     function getDepartmentInfo() {
         global $bdd;        
-        $sql = "SELECT deptName, departmentId 
-                FROM `department` 
-                ORDER BY deptName";
+        
+        $sql = "SELECT deptName, departmentId FROM `department` ORDER BY deptName";
+        
         $stmt = $bdd->prepare($sql);
         $stmt->execute();
         $records = $stmt->fetchAll();
@@ -33,36 +36,32 @@
         return $records;
     }
     function getUserInfo($userId) {
-        global $bdd;    
+        global $bdd;  
+        
         $sql = "SELECT * FROM `user` WHERE userId = $userId";
+        
         $stmt = $bdd->prepare($sql);
         $stmt->execute();
         $record = $stmt->fetch();
         
-        // Debugging
-        // print_r($record);
-        
         return $record;
     }
     if(isset($_GET['updateUserForm'])) {
-        $sql = "UPDATE user
-                SET firstName = :fName,
-                    lastName = :lName,
-                    phone = :phone,
-                    gender = :gender,
-                    role = :role,
-                    deptId = :departmentId
-    			WHERE userId = :userId";
-    	$namedParameters = array();
-    	$namedParameters[":fName"] = $_GET['firstName'];
-    	$namedParameters[":lName"] = $_GET['lastName'];
-    	$namedParameters[":userId"] = $_GET['userId'];
-    	$namedParameters[":phone"] = $_GET['phone'];
-    	$namedParameters[":gender"] = $_GET['gender'];
-    	$namedParameters[":role"] = $_GET['role'];
-    	$namedParameters[":departmentId"] = $_GET['deptId'];
+        
+        $sql = "UPDATE user SET firstName = :fName, lastName = :lName, phone = :phone, gender = :gender, role = :role, deptId = :departmentId WHERE userId = :userId";
+        
+    	$parameters = array();
+    	$parameters[":fName"] = $_GET['firstName'];
+    	$parameters[":lName"] = $_GET['lastName'];
+    	$parameters[":userId"] = $_GET['userId'];
+    	$parameters[":phone"] = $_GET['phone'];
+    	$parameters[":gender"] = $_GET['gender'];
+    	$parameters[":role"] = $_GET['role'];
+    	$parameters[":departmentId"] = $_GET['deptId'];
         $stmt = $bdd->prepare($sql);
-        $stmt->execute($namedParameters);
+        $stmt->execute($parameters);
+        
+        echo "User has been updated successfully! <br>";
     }
     if(isset($_GET['userId'])) {
         $userInfo = getUserInfo($_GET['userId']);
@@ -73,15 +72,30 @@
 <html>
     <head>
         <title> Admin: Updating User </title>
+        <style>
+            body{
+                font-family: 'Satisfy', cursive;
+                font-size : 150%;
+                background-color : lightgrey;
+            }
+            h1 {
+                color : #660000;
+            }
+            h2 {
+                color : #990000;
+            }
+        </style>
+        
+        <link href="https://fonts.googleapis.com/css?family=Satisfy" rel="stylesheet">
     </head>
     
     <body>
         <a href="admin.php">Back to the menu</a>
-        <h1> Admin Section </h1>
+        <h1> Welcome to the Admin Section </h1>
         <h2> Updating User Info </h2>
     
         <fieldset>
-            <legend> Update User </legend>
+            <legend> <b>Update User </b></legend>
             
             <form>
                 <input type="hidden" name="userId" value="<?=$userInfo['userId']?>" />

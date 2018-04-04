@@ -612,3 +612,4 @@ Stack trace:
 #1 {main}
   thrown in /home/ubuntu/workspace/Lab5/loginProcess.php on line 20
 [04-Apr-2018 04:50:18 UTC] PHP Parse error:  syntax error, unexpected '}' in /home/ubuntu/workspace/Lab5/index.php on line 66
+[04-Apr-2018 15:29:04 UTC] PHP Parse error:  syntax error, unexpected end of file in /home/ubuntu/workspace/Lab5/index.php on line 84
