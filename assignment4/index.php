@@ -1,15 +1,9 @@
 <!DOCTYPE html>
 <html>
-    <script>
-
-
-</script>
-
 <head>
     <title>Instagram</title>
     
     
-    <!--<link rel="stylesheet" href="style.css">-->
     <script src="function.js"></script>
 </head>
 <style>
@@ -147,24 +141,8 @@
                         }
                         var nameLineBreak = document.createElement("br");
                         comments.appendChild(nameLineBreak);
-                        
-                            
-                
-                
-                
-                
-                            //         </div>
-                            //     </div>
-                            // </li>
-                
-                
-                
-                
-                
             }
-            
-            
-            
+
             var data = {
                   posts: [
                     {
@@ -268,13 +246,13 @@
                   ]
                 };
                         
-                        var num=0;
+                var num=0;
 
-                        for (var c in data.posts) {
-                            var contact = data.posts[c];
-                            printPost(contact,num);
-                            
-                        }
+                for (var c in data.posts) {
+                    var contact = data.posts[c];
+                    printPost(contact,num);
+                    
+                }
             
         
                 

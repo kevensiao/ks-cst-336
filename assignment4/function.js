@@ -95,18 +95,6 @@ function printPost(contact) {
             }
             var nameLineBreak = document.createElement("br");
             comments.appendChild(nameLineBreak);
-            
-                
-    
-    
-    
-    
-                //         </div>
-                //     </div>
-                // </li>
-    
-    
-    
-    
+
     
 }
