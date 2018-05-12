@@ -103,7 +103,11 @@
             <h2>Welcome <?=$_SESSION['userFullName']?>!</h2>
         </div>
         
-        <div id="content">
+        <div id="content"> 
+                <form>
+                    Invitation Link <input type="text"/>
+                </form>
+                
                 <form action="addSlot.php">
                     <input type="submit" value="Add Multiple Time Slots"/>
                 </form>
